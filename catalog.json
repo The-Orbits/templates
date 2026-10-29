@@ -219,6 +219,10 @@
           "mode": "100644"
         },
         {
+          "path": "src/routes/+layout.ts",
+          "mode": "100644"
+        },
+        {
           "path": "src/routes/+page.server.ts",
           "mode": "100644"
         },

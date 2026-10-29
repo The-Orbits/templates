@@ -1,3 +1,5 @@
+import { Analytics } from "@useorbits/analytics/next";
+import { SpeedInsights } from "@useorbits/speed-insights/next";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FONTS } from "@/lib/fonts";
@@ -38,6 +40,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <span className="badge plain">Payments by Paystack</span>
           <span className="badge plain">Delivery across Nigeria in 2–4 days</span>
         </footer>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

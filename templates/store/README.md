@@ -33,6 +33,16 @@ The secret key is only ever used on the server.
   from the receipt page: the buyer might close the tab before they get there.
 - Keep orders somewhere: a database, or the webhook forwarding them to your inventory tool.
 
+## Analytics and Speed Insights
+
+The root layout (`app/layout.tsx`) renders Orbit's [`@useorbits/analytics`](https://www.npmjs.com/package/@useorbits/analytics) and
+[`@useorbits/speed-insights`](https://www.npmjs.com/package/@useorbits/speed-insights). Turn them on in your project's
+**Analytics** and **Speed Insights** tabs: until then nothing is collected, and in development they only log to the
+console. No cookies, so no cookie banner.
+
+The store also counts two custom events with `track()`: **Added to cart**, with the product, and **Order placed**. They
+show in the Analytics tab's Events panel.
+
 ## Link previews
 
 `public/og.png` is the picture a shared link shows (1200×630); swap in your own. Set `SITE_URL` (`https://your-site.com`) in the project's environment variables and the build writes `og:image` as a full address; without it the address is relative, which some link bots ignore.

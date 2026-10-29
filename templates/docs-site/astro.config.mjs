@@ -18,6 +18,9 @@ export default defineConfig({
       lastUpdated: true,
       customCss: ["./src/styles/custom.css"],
       head: [
+        // Analytics and Speed Insights: Orbit serves these once they're on in the project.
+        { tag: "script", attrs: { src: "/_orbits/analytics.js", defer: true } },
+        { tag: "script", attrs: { src: "/_orbits/speed-insights.js", defer: true } },
         { tag: "meta", attrs: { property: "og:image", content: `${SITE_URL ?? ""}/og.png` } },
         { tag: "meta", attrs: { property: "og:image:width", content: "1200" } },
         { tag: "meta", attrs: { property: "og:image:height", content: "630" } },

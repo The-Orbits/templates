@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { track } from "@useorbits/analytics";
 import { add } from "@/lib/cart";
 
 export function AddToCart({ slug }: { slug: string }) {
@@ -12,6 +13,7 @@ export function AddToCart({ slug }: { slug: string }) {
         className="btn btn-primary btn-lg"
         onClick={() => {
           add(slug);
+          track("Added to cart", { product: slug });
           setAdded((n) => n + 1);
         }}
       >

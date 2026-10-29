@@ -16,6 +16,12 @@ page.
 - A form that fails validation answers 422 with itself and the error, and `HX-Retarget` puts it back in place.
 - `public/` is served at `/public`; htmx comes from `node_modules`, so updating it is a version bump.
 
+## Analytics and Speed Insights
+
+The layout (`src/components/layout.tsx`) loads `/_orbits/analytics.js` and `/_orbits/speed-insights.js`. Orbit serves them on your production address
+once you turn them on in the project's **Analytics** and **Speed Insights** tabs; until then they're a 404 and nothing
+is collected. No cookies, so no cookie banner.
+
 ## Link previews
 
 `public/og.png` is the picture a shared link shows (1200×630); swap in your own. `og:image` points at it with the address the page was asked for, or `SITE_URL` when it's set, so a custom domain shows up right.
