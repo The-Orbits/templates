@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@useorbits/analytics": "^0.2.1",
+    "@useorbits/speed-insights": "^0.2.1",
     "astro": "^7.4.2"
   }
 }

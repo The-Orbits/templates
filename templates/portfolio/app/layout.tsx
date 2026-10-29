@@ -1,3 +1,5 @@
+import { Analytics } from "@useorbits/analytics/next";
+import { SpeedInsights } from "@useorbits/speed-insights/next";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FONTS } from "@/lib/fonts";
@@ -48,6 +50,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             ))}
           </nav>
         </footer>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

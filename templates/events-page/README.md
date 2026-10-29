@@ -22,6 +22,13 @@ Times carry their UTC offset and are shown in the event's time zone, so they're 
 | --- | --- |
 | `RSVP_WEBHOOK_URL` | Optional. Each RSVP is POSTed here as JSON. Declared and checked in `src/env.ts`. |
 
+## Analytics and Speed Insights
+
+The root `src/routes/+layout.ts` starts Orbit's [`@useorbits/analytics`](https://www.npmjs.com/package/@useorbits/analytics) and
+[`@useorbits/speed-insights`](https://www.npmjs.com/package/@useorbits/speed-insights). Turn them on in your project's
+**Analytics** and **Speed Insights** tabs: until then nothing is collected, and in development they only log to the
+console. No cookies, so no cookie banner.
+
 ## Link previews
 
 `static/og.png` is the picture a shared link shows (1200×630); swap in your own. `og:image` points at it with the address the page was asked for, or `SITE_URL` when it's set, so a custom domain shows up right.

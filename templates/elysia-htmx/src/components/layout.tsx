@@ -37,6 +37,9 @@ export function Layout({ title, origin, children }: { title: string; origin: str
         <link rel="stylesheet" href="/public/orbit.css" />
         <link rel="stylesheet" href="/public/styles.css" />
         <script src="/htmx.min.js" defer></script>
+        {/* Analytics and Speed Insights: Orbit serves these once they're on in your project. */}
+        <script src="/_orbits/analytics.js" defer></script>
+        <script src="/_orbits/speed-insights.js" defer></script>
       </head>
       <body class="ground">{children as "safe"}</body>
     </html>
